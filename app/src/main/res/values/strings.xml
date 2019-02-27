@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PortfolioApp</string>
+
+    <!--TitleActivity-->
+    <string name="title">Trevor Holmes</string>
+    <string name="subtitle">Digital portfolio</string>
+    <string name="titlebutton">Begin</string>
+
 </resources>
