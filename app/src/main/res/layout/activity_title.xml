@@ -53,12 +53,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="125dp"
         android:onClick="launchMenuActivity"
-        android:background="#B36939"
+        android:background="@color/button_color"
         android:textColor="@color/text_shadow_white"
         android:textSize="17dp"
         android:shadowColor="@color/text_shadow"
         android:shadowDx="3"
         android:shadowDy="3"
+        android:shadowRadius="2"
         android:text="@string/titlebutton"
         android:fontFamily="sans-serif-condensed-light"/>
 
