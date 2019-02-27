@@ -4,46 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TitleActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".TitleActivity">
 
     <ImageView
         android:id="@+id/titleBG"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/poseidonbg"
         android:background="@drawable/poseidonblur"
-        />
+        android:src="@drawable/poseidonbg" />
+
 
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:fontFamily="serif"
         android:text="@string/title"
         android:textSize="30sp"
-        android:fontFamily="serif"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="140dp"/>
-
+        android:textColor="@color/text_shadow_white"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="2" />
 
     <TextView
         android:id="@+id/subtitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/titleText"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-condensed-light"
         android:text="@string/subtitle"
         android:textSize="20sp"
-        android:fontFamily="sans-serif-condensed-light"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/titleText"/>
+        android:textColor="@color/text_shadow_white"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="2" />
 
     <Button
         android:id="@+id/titleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="125dp"
+        android:onClick="launchMenuActivity"
+        android:background="#B36939"
+        android:textColor="@color/text_shadow_white"
+        android:textSize="17dp"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="3"
+        android:shadowDy="3"
         android:text="@string/titlebutton"
-        android:layout_marginBottom="115dp"/>
+        android:fontFamily="sans-serif-condensed-light"/>
 
     <ImageView
         android:id="@+id/fadeOut"
