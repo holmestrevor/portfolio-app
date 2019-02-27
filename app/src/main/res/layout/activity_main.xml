@@ -11,7 +11,8 @@
         android:id="@+id/titleBG"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/poseidonBG"
+        android:src="@drawable/poseidonbg"
+        android:background="@drawable/poseidonblur"
         />
 
     <TextView
@@ -31,6 +32,13 @@
         android:textSize="20dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/titleText"/>
+
+    <ImageView
+        android:id="@+id/fadeOut"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_dark"
+        android:visibility="invisible"/>
 
     <Button
         android:id="@+id/titleButton"
