@@ -1,30 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:rowCount="1"
-    android:columnCount="2">
+    android:orientation="vertical"
+    android:weightSum="100">
 
-    <!--<LinearLayout-->
-        <!--android:orientation="horizontal"-->
-        <!--android:layout_column="0"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_rowWeight="1">-->
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:background="@color/colorPrimaryDark">
 
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="match_parent" />-->
+        <TextView
+            android:id="@+id/bioTitle"
+            android:text="Hello world!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:textColor="@color/text_shadow_white"
+            android:fontFamily="serif"
+            android:textSize="25sp"/>
 
-    <!--</LinearLayout>-->
+        <TextView
+            android:id="@+id/bioParagraph1"
+            android:text="Lorem ipsum solor dit amet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bioTitle"
+            android:textColor="@color/text_shadow_gray"/>
+
+    </RelativeLayout>
 
     <ListView
         android:id="@+id/categories"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_rowWeight="1">
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:background="@color/colorPrimary">
 
     </ListView>
 
-</GridLayout>
+</LinearLayout>

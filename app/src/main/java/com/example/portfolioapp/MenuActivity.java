@@ -18,12 +18,17 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+
+
         categories = generateCategories();
 
-        //TODO add custom ListView with artworks
+        //TODO add custom ListView with artwork categories
         CategoryAdapter adt = new CategoryAdapter(this, categories);
         ListView categoryList = (ListView)findViewById(R.id.categories);
         categoryList.setAdapter(adt);
+        categoryList.setOnItemClickListener((parent, view, position, id) -> {
+
+        });
 
         //TODO add database link to access images on a remote server
 
