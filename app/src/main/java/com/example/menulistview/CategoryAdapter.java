@@ -1,58 +1,37 @@
 package com.example.menulistview;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.example.portfolioapp.R;
 
 import java.util.ArrayList;
 
 public class CategoryAdapter extends ArrayAdapter<Category> {
 
-    Context ctx;
-    ArrayList<Category> items;
-
-    public CategoryAdapter(Context context, int resource, ArrayList<Category> objects) {
-        super(context, resource, objects);
-    }
-
-    public CategoryAdapter(Context context, int resource) {
-        super(context, resource);
-    }
-
-    @Override
-    public int getCount() {
-        return items.size();
-    }
-
-    @Override
-    public Category getItem(int position) {
-        return items.get(position);
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return 0;
+    public CategoryAdapter(Context context, ArrayList<Category> objects) {
+        super(context, 0, objects);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        return super.getView(position, convertView, parent);
-    }
 
-    public Context getCtx() {
-        return ctx;
-    }
+        Category c = getItem(position);
 
-    public void setCtx(Context ctx) {
-        this.ctx = ctx;
-    }
+        if(convertView==null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.menu_item, parent, false);
+        }
 
-    public ArrayList<Category> getItems() {
-        return items;
-    }
+        TextView text = (TextView)convertView.findViewById(R.id.categoryDescription);
+        ImageView img = (ImageView)convertView.findViewById(R.id.categoryPreview);
 
-    public void setItems(ArrayList<Category> items) {
-        this.items = items;
+        text.setText(c.getDescription());
+
+        return convertView;
     }
 }

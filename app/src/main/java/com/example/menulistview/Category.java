@@ -17,7 +17,7 @@ public class Category {
     }
 
     public void setDescription(String description) {
-        this.img=img;
+        this.description=description;
     }
 
     public String getDescription() {
