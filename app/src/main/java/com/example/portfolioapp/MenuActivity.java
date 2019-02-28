@@ -12,6 +12,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.menulistview.Category;
+import com.example.menulistview.CategoryAdapter;
 
 import java.util.ArrayList;
 
@@ -28,7 +29,7 @@ public class MenuActivity extends AppCompatActivity {
 
         //TODO add custom ListView with artworks
         ListView categoryList = (ListView)findViewById(R.id.categories);
-        CategoryAdapter adt = new CategoryAdapter(this, categories);
+        CategoryAdapter adt = new CategoryAdapter(this, R.layout.menu_item, categories);
         categoryList.setAdapter(adt);
 
         //TODO add database link to access images on a remote server
@@ -40,48 +41,6 @@ public class MenuActivity extends AppCompatActivity {
         categories.add(new Category("Realism", null));
         categories.add(new Category("Sketches", null));
         return categories;
-    }
-
-    private class CategoryAdapter extends BaseAdapter {
-
-        private ArrayList<Category> items;
-        private Context context;
-
-        public CategoryAdapter(Context context, ArrayList<Category> items) {
-            this.context = context;
-            this.items = items;
-        }
-
-        @Override
-        public int getCount() {
-            return items.size();
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return items.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            LayoutInflater inflater = getLayoutInflater();
-            View newView = inflater.inflate(R.layout.menu_item, parent, false);
-
-            Category currentItem = (Category) getItem(position);
-
-            TextView text = (TextView)convertView.findViewById(R.id.categoryDescription);
-            ImageView img = (ImageView)convertView.findViewById(R.id.categoryPreview);
-
-            text.setText(currentItem.getDescription());
-            img.setImageDrawable(currentItem.getImg());
-
-            return newView;
-        }
     }
 
 }
