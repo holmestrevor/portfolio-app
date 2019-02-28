@@ -31,6 +31,7 @@ public class CategoryAdapter extends ArrayAdapter<Category> {
         ImageView img = (ImageView)convertView.findViewById(R.id.categoryPreview);
 
         text.setText(c.getDescription());
+        img.setImageDrawable(c.getImg());
 
         return convertView;
     }

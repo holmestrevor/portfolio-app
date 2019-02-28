@@ -25,7 +25,9 @@ public class Category {
     }
 
     public void setImg(Drawable img) {
-        this.img=img;
+        if(img==null) {
+            this.img = Drawable.createFromPath("C:\\Users\\sandw\\AndroidStudioProjects\\portfolio-app\\app\\src\\main\\res\\drawable\\poseidonbg.jpg");
+        } else this.img=img;
     }
 
     public Drawable getImg() {

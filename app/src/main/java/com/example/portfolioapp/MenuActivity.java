@@ -31,7 +31,8 @@ public class MenuActivity extends AppCompatActivity {
 
     private ArrayList<Category> generateCategories() {
         ArrayList<Category> items = new ArrayList<Category>();
-        items.add(new Category("Realism", null));
+        Drawable realism = Drawable.createFromPath("C:\\Users\\sandw\\AndroidStudioProjects\\portfolio-app\\app\\src\\main\\res\\drawable\\poseidonbg.jpg");
+        items.add(new Category("Realism", realism));
         items.add(new Category("Sketches", null));
         return items;
     }
