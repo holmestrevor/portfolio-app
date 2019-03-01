@@ -1,4 +1,4 @@
-package com.example.com.example.artworklistview;
+package com.example.artworklistview;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,9 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.portfolioapp.R;
-
 import java.util.List;
 
 public class ArtworkAdapter extends ArrayAdapter<Artwork> {

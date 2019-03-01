@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:weightSum="100"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimary"
+    android:onClick="launchArtworkActivity">
 
     <ImageView
         android:id="@+id/categoryPreview"

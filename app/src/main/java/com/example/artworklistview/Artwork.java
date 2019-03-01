@@ -1,4 +1,4 @@
-package com.example.com.example.artworklistview;
+package com.example.artworklistview;
 
 import android.graphics.drawable.Drawable;
 

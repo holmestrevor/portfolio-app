@@ -1,7 +1,9 @@
 package com.example.portfolioapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ListView;
@@ -17,9 +19,15 @@ public class MenuActivity extends AppCompatActivity {
 
     private ArrayList<Category> categories;
 
-    TextView bioTitle;
-    ArrayList<TextView> bioParagraphs;
-    Animation fadeInRight, fadeInLeft;
+    private final int SKETCHES = 5;
+    private final int PAINTINGS = 10;
+
+    private TextView bioTitle;
+    private ArrayList<TextView> bioParagraphs;
+    private Animation fadeInRight, fadeInLeft;
+    private CategoryAdapter adt;
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,11 +62,11 @@ public class MenuActivity extends AppCompatActivity {
         categories = generateCategories();
 
         //TODO add custom ListView with artwork categories
-        CategoryAdapter adt = new CategoryAdapter(this, categories);
+        adt = new CategoryAdapter(this, categories);
         ListView categoryList = (ListView)findViewById(R.id.categories);
         categoryList.setAdapter(adt);
         categoryList.setOnItemClickListener((parent, view, position, id) -> {
-
+            Intent intent = new Intent();
         });
 
         //TODO add database link to access images on a remote server
@@ -70,6 +78,19 @@ public class MenuActivity extends AppCompatActivity {
         items.add(new Category("Paintings", R.drawable.ironmanthumb));
         items.add(new Category("Sketches/Drawings", R.drawable.sombrathumb));
         return items;
+    }
+
+    public void launchArtworkActivity(View view) {
+        Intent intent = new Intent(this, ArtworkActivity.class);
+        TextView t = (TextView)view;
+        switch(t.getText().toString()) {
+            case "Paintings":
+                startActivityForResult(intent, PAINTINGS);
+                break;
+            case "Sketches/Drawings":
+                startActivityForResult(intent, SKETCHES);
+                break;
+        }
     }
 
 }
