@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -61,7 +62,6 @@ public class MenuActivity extends AppCompatActivity {
 
         categories = generateCategories();
 
-        //TODO add custom ListView with artwork categories
         adt = new CategoryAdapter(this, categories);
         ListView categoryList = (ListView)findViewById(R.id.categories);
         categoryList.setAdapter(adt);
@@ -82,7 +82,9 @@ public class MenuActivity extends AppCompatActivity {
 
     public void launchArtworkActivity(View view) {
         Intent intent = new Intent(this, ArtworkActivity.class);
-        TextView t = (TextView)view;
+        int titleIndex = 1;
+        LinearLayout l = (LinearLayout)view;
+        TextView t = (TextView)l.getChildAt(titleIndex);
         switch(t.getText().toString()) {
             case "Paintings":
                 startActivityForResult(intent, PAINTINGS);

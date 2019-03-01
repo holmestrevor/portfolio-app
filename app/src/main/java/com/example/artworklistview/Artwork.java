@@ -6,16 +6,16 @@ public class Artwork {
 
     private String title;
     private String blurb;
-    private Drawable image;
+    private int imageID;
 
     public Artwork() {
-        this("Placeholder", "If you're seeing this, I did something wrong.", null);
+        this("Placeholder", "If you're seeing this, I did something wrong.", 0);
     }
 
-    public Artwork(String title, String blurb, Drawable image) {
+    public Artwork(String title, String blurb, int imageID) {
         setTitle(title);
         setBlurb(blurb);
-        setImage(image);
+        setImage(imageID);
     }
 
     public String getTitle() {
@@ -34,11 +34,11 @@ public class Artwork {
         this.blurb = blurb;
     }
 
-    public Drawable getImage() {
-        return image;
+    public int getImageID() {
+        return imageID;
     }
 
-    public void setImage(Drawable image) {
-        this.image = image;
+    public void setImage(int imageID) {
+        this.imageID = imageID;
     }
 }
