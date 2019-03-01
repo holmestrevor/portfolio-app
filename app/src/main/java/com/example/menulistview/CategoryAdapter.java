@@ -27,11 +27,17 @@ public class CategoryAdapter extends ArrayAdapter<Category> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.menu_item, parent, false);
         }
 
+        if(position%2==1) {
+            convertView.setBackgroundColor(convertView.getResources().getColor(R.color.colorPrimaryLight, null));
+        } else {
+            convertView.setBackgroundColor(convertView.getResources().getColor(R.color.colorPrimary, null));
+        }
+
         TextView text = (TextView)convertView.findViewById(R.id.categoryDescription);
         ImageView img = (ImageView)convertView.findViewById(R.id.categoryPreview);
 
         text.setText(c.getDescription());
-        img.setImageDrawable(c.getImg());
+        img.setImageResource(c.getImgID());
 
         return convertView;
     }

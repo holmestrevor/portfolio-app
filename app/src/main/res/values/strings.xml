@@ -6,8 +6,13 @@
     <string name="subtitle">Digital Gallery</string>
     <string name="titlebutton">Begin</string>
 
+
     <!--MenuActivity-->
 
     <!--menu_item.xml-->
+
+    <!--placeholder strings-->
+    <string name="placeholder_short">this is a placeholder</string>
+    <string name="placeholder_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
 
 </resources>

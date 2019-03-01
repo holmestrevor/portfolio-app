@@ -1,19 +1,17 @@
 package com.example.menulistview;
 
-import android.graphics.drawable.Drawable;
-
 public class Category {
 
     private String description;
-    private Drawable img;
+    private int imgID;
 
     public Category() {
-        this("null", null);
+        this("null", 0);
     }
 
-    public Category(String description, Drawable img) {
+    public Category(String description, int imgID) {
         setDescription(description);
-        setImg(img);
+        setImgID(imgID);
     }
 
     public void setDescription(String description) {
@@ -24,14 +22,12 @@ public class Category {
         return description;
     }
 
-    public void setImg(Drawable img) {
-        if(img==null) {
-            this.img = Drawable.createFromPath("C:\\Users\\sandw\\AndroidStudioProjects\\portfolio-app\\app\\src\\main\\res\\drawable\\poseidonbg.jpg");
-        } else this.img=img;
+    public void setImgID(int imgID) {
+        this.imgID=imgID;
     }
 
-    public Drawable getImg() {
-        return img;
+    public int getImgID() {
+        return imgID;
     }
 
     public String toString() {

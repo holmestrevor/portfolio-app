@@ -9,8 +9,8 @@
         android:id="@+id/artworkImage"
         android:src="@drawable/poseidonbg"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="66.4"
+        android:layout_height="match_parent"
+        android:layout_weight="60"
         android:scaleType="fitCenter"/>
 
     <LinearLayout
@@ -18,14 +18,15 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="100"
-        android:layout_weight="33.3">
+        android:layout_weight="40">
 
         <TextView
             android:id="@+id/artworkTitle"
-            android:text="placeholder"
+            android:text="@string/placeholder_short"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="10"/>
+            android:layout_weight="10"
+            android:textSize="20dp"/>
 
         <TextView
             android:id="@+id/artworkBlurb"

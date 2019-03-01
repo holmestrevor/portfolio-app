@@ -14,22 +14,28 @@
 
         <TextView
             android:id="@+id/bioTitle"
-            android:text="Hello world!"
+            android:text="Person, Human, Mammal."
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerInParent="true"
             android:textColor="@color/text_shadow_white"
             android:fontFamily="serif"
-            android:textSize="25sp"/>
+            android:textSize="25sp"
+            android:shadowColor="@color/text_shadow"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="2" />
 
         <TextView
             android:id="@+id/bioParagraph1"
-            android:text="Lorem ipsum solor dit amet"
-            android:layout_width="wrap_content"
+            android:text="Hello there! My name is Trevor Holmes. I'm @ years old, and currently pursuing a career in programming."
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/bioTitle"
-            android:textColor="@color/text_shadow_gray"/>
+            android:textColor="@color/text_shadow_gray"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
 
     </RelativeLayout>
 

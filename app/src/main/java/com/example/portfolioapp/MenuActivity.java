@@ -1,6 +1,5 @@
 package com.example.portfolioapp;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
@@ -11,10 +10,8 @@ import android.widget.TextView;
 import com.example.menulistview.Category;
 import com.example.menulistview.CategoryAdapter;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Calendar;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -28,15 +25,31 @@ public class MenuActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        getSupportActionBar().hide();
 
         bioTitle = (TextView)findViewById(R.id.bioTitle);
         bioParagraphs = new ArrayList<TextView>();
+
         bioParagraphs.add((TextView)findViewById(R.id.bioParagraph1));
+
+        /*
+        This block will replace the character @ in the first paragraph with my current age, so I'll
+        never have to do it manually because I'm lazy.
+         */
+        String p1 = ((TextView) findViewById(R.id.bioParagraph1)).getText().toString();
+        bioParagraphs.get(0).setText(p1.replaceFirst("@",String.valueOf(Calendar.getInstance().get(Calendar.YEAR)-1998)));
 
         fadeInRight = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in_fromright);
         fadeInLeft = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in_fromleft);
 
         bioTitle.setAnimation(fadeInRight);
+        for(int i=0; i<bioParagraphs.size(); i++) {
+            if(i%2==0) {
+                bioParagraphs.get(i).setAnimation(fadeInLeft);
+            } else {
+                bioParagraphs.get(i).setAnimation(fadeInRight);
+            }
+        }
 
         categories = generateCategories();
 
@@ -53,10 +66,9 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     private ArrayList<Category> generateCategories() {
-        ArrayList<Category> items = new ArrayList<Category>();
-        Drawable realism = Drawable.createFromPath("C:\\Users\\sandw\\AndroidStudioProjects\\portfolio-app\\app\\src\\main\\res\\drawable\\poseidonbg.jpg");
-        items.add(new Category("Realism", realism));
-        items.add(new Category("Sketches", null));
+        ArrayList<Category> items = new ArrayList<>();
+        items.add(new Category("Paintings", R.drawable.ironmanthumb));
+        items.add(new Category("Sketches/Drawings", R.drawable.sombrathumb));
         return items;
     }
 
