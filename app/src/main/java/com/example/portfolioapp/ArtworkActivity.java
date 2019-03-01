@@ -3,7 +3,6 @@ package com.example.portfolioapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.ListView;
 
 import com.example.artworklistview.Artwork;
@@ -25,8 +24,6 @@ public class ArtworkActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artworks);
 
-        artworks = loadArtworks(PAINTINGS);
-
         adt = new ArtworkAdapter(this, artworks);
         ListView artworkList = (ListView)findViewById(R.id.artworkList);
         artworkList.setAdapter(adt);
@@ -38,8 +35,14 @@ public class ArtworkActivity extends AppCompatActivity {
         switch(requestCode) {
             case PAINTINGS:
                 if(resultCode==RESULT_OK) {
-
+                    loadArtworks(PAINTINGS);
                 }
+                break;
+            case SKETCHES:
+                if(resultCode==RESULT_OK) {
+                    loadArtworks(SKETCHES);
+                }
+                break;
         }
     }
 

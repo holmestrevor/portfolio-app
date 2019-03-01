@@ -20,8 +20,8 @@ public class MenuActivity extends AppCompatActivity {
 
     private ArrayList<Category> categories;
 
-    private final int SKETCHES = 5;
-    private final int PAINTINGS = 10;
+    public static final int SKETCHES = 5;
+    public static int PAINTINGS = 10;
 
     private TextView bioTitle;
     private ArrayList<TextView> bioParagraphs;
