@@ -3,6 +3,7 @@ package com.example.portfolioapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -37,6 +38,9 @@ public class MenuActivity extends AppCompatActivity {
         bioParagraphs = new ArrayList<TextView>();
 
         bioParagraphs.add((TextView)findViewById(R.id.bioParagraph1));
+        bioParagraphs.add((TextView)findViewById(R.id.bioParagraph2));
+
+        bioParagraphs.get(1).setMovementMethod(LinkMovementMethod.getInstance());
 
         /*
         This block will replace the character @ in the first paragraph with my current age, so I'll

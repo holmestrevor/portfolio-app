@@ -8,9 +8,9 @@
 
 
     <!--MenuActivity-->
-    <string name="bioTitle"></string>
-    <string name="bioParagraph1"></string>
-    <string name="bioParagraph2"></string>
+    <string name="bioTitle">Hello there!</string>
+    <string name="bioParagraph1">My name is Trevor holmes. I am @ years old, and am currently pursusing a career in programming.\nThis app is a combination of my 2 passions: Art and Programming. Basically, I want to have something flashy I can show to people. Please select any of the categories below to see a selection of my works, along with some information on each piece.</string>
+    <string name="bioParagraph2">Contact:\n\n\tEmail:\n\tholmes.trevor98@gmail.com\n\tholm0218@algonquinlive.com\n\n\tGitHub: https://www.github.com/holmestrevor\n</string>
 
     <!--menu_item.xml-->
 
