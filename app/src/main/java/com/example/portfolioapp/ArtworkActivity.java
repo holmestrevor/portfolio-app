@@ -46,17 +46,17 @@ public class ArtworkActivity extends AppCompatActivity {
         ArrayList<Artwork> temp = new ArrayList<Artwork>();
         switch(category) {
             case PAINTINGS:
-                temp.add(new Artwork(getResources().getString(R.string.ironmanTitle),getResources().getString(R.string.ironmanDescription), R.drawable.ironmanthumb));
-                temp.add(new Artwork(getResources().getString(R.string.pupperTitle),getResources().getString(R.string.pupperDescription),R.drawable.pupperthumb));
+                temp.add(new Artwork(getResources().getString(R.string.ironmanTitle),getResources().getString(R.string.ironmanDescription), R.drawable.ironmanthumb, R.drawable.ironmanfull));
+                temp.add(new Artwork(getResources().getString(R.string.pupperTitle),getResources().getString(R.string.pupperDescription),R.drawable.pupperthumb, R.drawable.pupperthumb));
                 break;
             case SKETCHES:
-                temp.add(new Artwork(getResources().getString(R.string.sombraTitle),getResources().getString(R.string.sombraDescription), R.drawable.sombrathumb));
-                temp.add(new Artwork(getResources().getString(R.string.peggTitle),getResources().getString(R.string.peggDescription),R.drawable.peggthumb));
-                temp.add(new Artwork(getResources().getString(R.string.pageTitle),getResources().getString(R.string.pageDescription),R.drawable.pagethumb));
-                temp.add(new Artwork(getResources().getString(R.string.streetTitle),getResources().getString(R.string.streetDescription),R.drawable.streetthumb));
+                temp.add(new Artwork(getResources().getString(R.string.sombraTitle),getResources().getString(R.string.sombraDescription), R.drawable.sombrathumb, R.drawable.sombrafull));
+                temp.add(new Artwork(getResources().getString(R.string.peggTitle),getResources().getString(R.string.peggDescription),R.drawable.peggthumb, R.drawable.peggfull));
+                temp.add(new Artwork(getResources().getString(R.string.pageTitle),getResources().getString(R.string.pageDescription),R.drawable.pagethumb, R.drawable.pagefull));
+                temp.add(new Artwork(getResources().getString(R.string.streetTitle),getResources().getString(R.string.streetDescription),R.drawable.streetthumb, R.drawable.streetfull));
                 break;
             case DIGITAL:
-                temp.add(new Artwork(getResources().getString(R.string.darkelfTitle),getResources().getString(R.string.darkelfDescription), R.drawable.darkelfthumb));
+                temp.add(new Artwork(getResources().getString(R.string.darkelfTitle),getResources().getString(R.string.darkelfDescription), R.drawable.darkelfthumb, R.drawable.darkelffull));
         }
         return temp;
     }

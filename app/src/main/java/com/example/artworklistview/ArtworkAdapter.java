@@ -1,6 +1,7 @@
 package com.example.artworklistview;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.portfolioapp.R;
+import com.example.portfolioapp.ViewArtworkActivity;
 
 import java.util.List;
 
@@ -42,6 +44,12 @@ public class ArtworkAdapter extends ArrayAdapter<Artwork> {
         title.setText(work.getTitle());
         blurb.setText(work.getBlurb());
         artworkImage.setImageResource(work.getImageID());
+
+        convertView.setOnClickListener((b) -> {
+            Intent i = new Intent(getContext(), ViewArtworkActivity.class);
+            i.putExtra("imageID", work.getFullImageID());
+            getContext().startActivity(i);
+        });
 
         return convertView;
 

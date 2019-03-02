@@ -39,6 +39,15 @@
                 android:value=".MenuActivity" />
         </activity>
 
+        <activity android:name=".ViewArtworkActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:parentActivityName=".ArtworkActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ArtworkActivity"/>
+
+        </activity>
+
     </application>
 
 </manifest>
