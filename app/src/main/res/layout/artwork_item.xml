@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:weightSum="100">
+    android:weightSum="100"
+    android:background="@color/colorPrimaryDark">
 
     <ImageView
         android:id="@+id/artworkImage"
@@ -16,28 +17,29 @@
     <LinearLayout
         android:id="@+id/textBox"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:weightSum="100"
         android:layout_weight="40">
 
         <TextView
             android:id="@+id/artworkTitle"
             android:text="@string/placeholder_short"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="10"
-            android:textSize="20dp"
-            android:textAlignment="center"/>
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/text_shadow_white"
+            android:paddingStart="5dp"
+            android:paddingEnd="2dp"
+            android:paddingTop="5dp"/>
 
         <TextView
             android:id="@+id/artworkBlurb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="90"
             android:text="@string/placeholder_long"
-            android:paddingLeft="2dp"
-            android:paddingRight="2dp"/>
+            android:paddingStart="5dp"
+            android:paddingEnd="2dp"
+            android:textColor="@color/text_shadow_gray"/>
 
     </LinearLayout>
 

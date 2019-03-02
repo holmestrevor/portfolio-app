@@ -20,9 +20,6 @@ public class MenuActivity extends AppCompatActivity {
 
     private ArrayList<Category> categories;
 
-    public static final int SKETCHES = 5;
-    public static int PAINTINGS = 10;
-
     private TextView bioTitle;
     private ArrayList<TextView> bioParagraphs;
     private Animation fadeInRight, fadeInLeft;
@@ -73,24 +70,43 @@ public class MenuActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    /**
+     *
+     * @return
+     */
     private ArrayList<Category> generateCategories() {
         ArrayList<Category> items = new ArrayList<>();
         items.add(new Category("Paintings", R.drawable.ironmanthumb));
         items.add(new Category("Sketches/Drawings", R.drawable.sombrathumb));
+        items.add(new Category("Digital",R.drawable.darkelfthumb));
         return items;
     }
 
+    /**
+     *
+     * @param view
+     */
     public void launchArtworkActivity(View view) {
         Intent intent = new Intent(this, ArtworkActivity.class);
-        int titleIndex = 1;
         LinearLayout l = (LinearLayout)view;
-        TextView t = (TextView)l.getChildAt(titleIndex);
+        TextView t = (TextView)l.getChildAt(1);
         switch(t.getText().toString()) {
-            case "Paintings":
-                startActivityForResult(intent, PAINTINGS);
-                break;
             case "Sketches/Drawings":
-                startActivityForResult(intent, SKETCHES);
+                intent.putExtra("Choice", 5);
+                startActivity(intent);
+                break;
+            case "Paintings":
+                intent.putExtra("Choice", 10);
+                startActivity(intent);
+                break;
+            case "Digital":
+                intent.putExtra("Choice", 15);
+                startActivity(intent);
                 break;
         }
     }

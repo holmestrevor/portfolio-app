@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
+
 import com.example.portfolioapp.R;
 
 import java.util.List;
@@ -29,15 +29,13 @@ public class ArtworkAdapter extends ArrayAdapter<Artwork> {
         }
 
         TextView title = (TextView)((LinearLayout)((LinearLayout)convertView).getChildAt(1)).getChildAt(0);
-        TextView blurb = (TextView)((LinearLayout)((LinearLayout)convertView).getChildAt(1)).getChildAt(0);
+        TextView blurb = (TextView)((LinearLayout)((LinearLayout)convertView).getChildAt(1)).getChildAt(1);
 
-//        TextView title = (TextView)convertView.findViewById(R.id.artworkTitle);
-//        TextView blurb = (TextView)convertView.findViewById(R.id.artworkBlurb);
         ImageView artworkImage = (ImageView)convertView.findViewById(R.id.artworkImage);
 
         title.setText(work.getTitle());
         blurb.setText(work.getBlurb());
-//        artworkImage.setImageResource(work.getImageID());
+        artworkImage.setImageResource(work.getImageID());
 
         return convertView;
 

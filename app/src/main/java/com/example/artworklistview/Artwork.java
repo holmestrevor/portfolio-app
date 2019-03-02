@@ -1,15 +1,12 @@
 package com.example.artworklistview;
 
-import android.graphics.drawable.Drawable;
-
 public class Artwork {
 
-    private String title;
-    private String blurb;
+    private String title, blurb;
     private int imageID;
 
     public Artwork() {
-        this("Placeholder", "If you're seeing this, I did something wrong.", 0);
+        this("SOME","BODY ONCE TOLD ME THE WORLD IS GONNA ROLL ME",0);
     }
 
     public Artwork(String title, String blurb, int imageID) {
