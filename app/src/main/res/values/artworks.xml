@@ -1,13 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--SKETCHES/DRAWINGS-->
+
     <!--Sombra-->
     <string name="sombraTitle">Sombra</string>
     <string name="sombraDescription">Medium: Colored Pencil, Ink Pen\nSombra is a character from the game Overwatch. I really loved one of her alternate designs, and this is the result of that. Cyberpunk chinstrap!</string>
 
+    <!--Simon Pegg-->
+    <string name="peggTitle">Simon Pegg</string>
+    <string name="peggDescription">Medium: Charcoal/Pastel\nArt project from high school. If you haven\'t seen Hot Fuzz, do yourself a favour.</string>
+
+    <!--Jimmy Page-->
+    <string name="pageTitle">Jimmy Page</string>
+    <string name="pageDescription">Medium: Charcoal/Pastel\nCommission done in high school for a friend. I\'m particularly proud of the way the leather looks on the jacket.</string>
+
+    <!--Street-->
+    <string name="streetTitle">Konbini</string>
+    <string name="streetDescription">Medium: Ink Pen\nA cozy little scene of a convenience store nestled in a residential area. While I don\'t think this is my best drawing, I find it very relaxing to look at.</string>
+
+
+    <!--PAINTINGS-->
+
     <!--Iron Man-->
     <string name="ironmanTitle">Iron Man</string>
     <string name="ironmanDescription">Medium: Acrylic on Canvas\nThis was done for a friend of mine. I\'m fairly proud of the lighting and texture that parts of this painting achieve. Iron man is the best Avenger too.</string>
+
+    <!--Pupper-->
+    <string name="pupperTitle">Shiba Inu</string>
+    <string name="pupperDescription">Medium: Watercolor pencils\nA cute little Shiba. I don\'t have one, so I draw one.</string>
+
+
+    <!--DIGITAL-->
 
     <!--Dark Elf-->
     <string name="darkelfTitle">Dark Elf</string>

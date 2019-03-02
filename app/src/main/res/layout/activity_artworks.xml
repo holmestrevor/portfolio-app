@@ -7,15 +7,26 @@
     android:background="@color/colorPrimaryDark">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/categoryTitle"
+        android:text="@string/placeholder_short"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="10"/>
+        android:layout_weight="10"
+        android:textSize="25sp"
+        android:textColor="@color/text_shadow_white"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="2"
+        android:gravity="center_vertical"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"/>
 
     <ListView
         android:id="@+id/artworkList"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="90">
+        android:layout_weight="90" >
     </ListView>
 
 </LinearLayout>

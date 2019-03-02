@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.artworklistview.Artwork;
 import com.example.artworklistview.ArtworkAdapter;
@@ -20,6 +21,9 @@ public class ArtworkActivity extends AppCompatActivity {
     private ArrayList<Artwork> artworks;
     private ArtworkAdapter adt;
 
+    ListView artworkList;
+    TextView categoryTitle;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,10 +31,13 @@ public class ArtworkActivity extends AppCompatActivity {
 
         Intent fromPrevious = getIntent();
 
+        categoryTitle = (TextView)findViewById(R.id.categoryTitle);
+        categoryTitle.setText(fromPrevious.getStringExtra("Category"));
+
         artworks = loadArtworks(fromPrevious.getIntExtra("Choice", 5));
 
         adt = new ArtworkAdapter(this, artworks);
-        ListView artworkList = (ListView)findViewById(R.id.artworkList);
+        artworkList = (ListView)findViewById(R.id.artworkList);
         artworkList.setAdapter(adt);
 
     }
@@ -40,9 +47,13 @@ public class ArtworkActivity extends AppCompatActivity {
         switch(category) {
             case PAINTINGS:
                 temp.add(new Artwork(getResources().getString(R.string.ironmanTitle),getResources().getString(R.string.ironmanDescription), R.drawable.ironmanthumb));
+                temp.add(new Artwork(getResources().getString(R.string.pupperTitle),getResources().getString(R.string.pupperDescription),R.drawable.pupperthumb));
                 break;
             case SKETCHES:
                 temp.add(new Artwork(getResources().getString(R.string.sombraTitle),getResources().getString(R.string.sombraDescription), R.drawable.sombrathumb));
+                temp.add(new Artwork(getResources().getString(R.string.peggTitle),getResources().getString(R.string.peggDescription),R.drawable.peggthumb));
+                temp.add(new Artwork(getResources().getString(R.string.pageTitle),getResources().getString(R.string.pageDescription),R.drawable.pagethumb));
+                temp.add(new Artwork(getResources().getString(R.string.streetTitle),getResources().getString(R.string.streetDescription),R.drawable.streetthumb));
                 break;
             case DIGITAL:
                 temp.add(new Artwork(getResources().getString(R.string.darkelfTitle),getResources().getString(R.string.darkelfDescription), R.drawable.darkelfthumb));
