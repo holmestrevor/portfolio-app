@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Sombra-->
+    <string name="sombraTitle">Sombra</string>
+    <string name="sombraDescription">Medium: Colored Pencil, Ink Pen\nSombra is a character from the game Overwatch. I really loved one of her alternate designs, and this is the result of that. Cyberpunk chinstrap!</string>
+
+    <!--Iron Man-->
+    <string name="ironmanTitle">Iron Man</string>
+    <string name="ironmanDescription">Medium: Acrylic on Canvas\nThis was done for a friend of mine. I\'m fairly proud of the lighting and texture that parts of this painting achieve. Iron man is the best Avenger too.</string>
+
+    <!--Dark Elf-->
+    <string name="darkelfTitle">Dark Elf</string>
+    <string name="darkelfDescription">Medium: Digital, Apple Pen\nI got the chance to try out the Apple pen, and I gotta say it\'s pretty fun to use. The subject is a generic dark elf from the Elder Scrolls series of games.</string>
+
+</resources>

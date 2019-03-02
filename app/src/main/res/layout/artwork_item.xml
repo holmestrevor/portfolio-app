@@ -30,7 +30,8 @@
             android:textColor="@color/text_shadow_white"
             android:paddingStart="5dp"
             android:paddingEnd="2dp"
-            android:paddingTop="5dp"/>
+            android:paddingTop="5dp"
+            android:textStyle="italic"/>
 
         <TextView
             android:id="@+id/artworkBlurb"

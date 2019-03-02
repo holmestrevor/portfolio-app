@@ -39,13 +39,13 @@ public class ArtworkActivity extends AppCompatActivity {
         ArrayList<Artwork> temp = new ArrayList<Artwork>();
         switch(category) {
             case PAINTINGS:
-                temp.add(new Artwork("Title","Caption", R.drawable.ironmanthumb));
+                temp.add(new Artwork(getResources().getString(R.string.ironmanTitle),getResources().getString(R.string.ironmanDescription), R.drawable.ironmanthumb));
                 break;
             case SKETCHES:
-                temp.add(new Artwork("Sombra", "From Underwatch.", R.drawable.sombrathumb));
+                temp.add(new Artwork(getResources().getString(R.string.sombraTitle),getResources().getString(R.string.sombraDescription), R.drawable.sombrathumb));
                 break;
             case DIGITAL:
-                temp.add(new Artwork("Dark Elf", "From Morrowland", R.drawable.darkelfthumb));
+                temp.add(new Artwork(getResources().getString(R.string.darkelfTitle),getResources().getString(R.string.darkelfDescription), R.drawable.darkelfthumb));
         }
         return temp;
     }

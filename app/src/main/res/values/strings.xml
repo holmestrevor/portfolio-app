@@ -8,6 +8,9 @@
 
 
     <!--MenuActivity-->
+    <string name="bioTitle"></string>
+    <string name="bioParagraph1"></string>
+    <string name="bioParagraph2"></string>
 
     <!--menu_item.xml-->
 
