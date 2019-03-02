@@ -62,9 +62,6 @@ public class MenuActivity extends AppCompatActivity {
         adt = new CategoryAdapter(this, categories);
         ListView categoryList = (ListView)findViewById(R.id.categories);
         categoryList.setAdapter(adt);
-        categoryList.setOnItemClickListener((parent, view, position, id) -> {
-            Intent intent = new Intent();
-        });
 
         //TODO add database link to access images on a remote server
 

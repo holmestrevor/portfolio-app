@@ -28,6 +28,12 @@ public class ArtworkAdapter extends ArrayAdapter<Artwork> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.artwork_item, parent, false);
         }
 
+        if(position%2==1) {
+            convertView.setBackgroundColor(convertView.getResources().getColor(R.color.colorPrimaryMidDark, null));
+        } else {
+            convertView.setBackgroundColor(convertView.getResources().getColor(R.color.colorPrimaryDark, null));
+        }
+
         TextView title = (TextView)((LinearLayout)((LinearLayout)convertView).getChildAt(1)).getChildAt(0);
         TextView blurb = (TextView)((LinearLayout)((LinearLayout)convertView).getChildAt(1)).getChildAt(1);
 
