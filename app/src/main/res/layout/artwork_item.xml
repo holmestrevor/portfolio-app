@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="100"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/colorPrimaryDark" >
 
     <ImageView
         android:id="@+id/artworkImage"
@@ -14,7 +14,7 @@
         android:layout_weight="60"
         android:scaleType="fitCenter"
         android:paddingStart="5dp"
-        android:paddingEnd="5dp"/>
+        android:paddingEnd="5dp" />
 
     <LinearLayout
         android:id="@+id/textBox"

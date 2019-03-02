@@ -96,19 +96,17 @@ public class MenuActivity extends AppCompatActivity {
             case "Sketches/Drawings":
                 intent.putExtra("Choice", 5);
                 intent.putExtra("Category", "Sketches/Drawings");
-                startActivity(intent);
                 break;
             case "Paintings":
                 intent.putExtra("Choice", 10);
                 intent.putExtra("Category", "Paintings");
-                startActivity(intent);
                 break;
             case "Digital":
                 intent.putExtra("Choice", 15);
                 intent.putExtra("Category", "Digital");
-                startActivity(intent);
                 break;
         }
+        startActivity(intent);
     }
 
 }
