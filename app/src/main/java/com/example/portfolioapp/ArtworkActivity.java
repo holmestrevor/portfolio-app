@@ -28,6 +28,7 @@ public class ArtworkActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artworks);
+        getSupportActionBar().setTitle(R.string.gallery);
 
         Intent fromPrevious = getIntent();
 
@@ -47,7 +48,7 @@ public class ArtworkActivity extends AppCompatActivity {
         switch(category) {
             case PAINTINGS:
                 temp.add(new Artwork(getResources().getString(R.string.ironmanTitle),getResources().getString(R.string.ironmanDescription), R.drawable.ironmanthumb, R.drawable.ironmanfull));
-                temp.add(new Artwork(getResources().getString(R.string.pupperTitle),getResources().getString(R.string.pupperDescription),R.drawable.pupperthumb, R.drawable.pupperthumb));
+                temp.add(new Artwork(getResources().getString(R.string.pupperTitle),getResources().getString(R.string.pupperDescription),R.drawable.pupperthumb, R.drawable.pupperfull));
                 break;
             case SKETCHES:
                 temp.add(new Artwork(getResources().getString(R.string.sombraTitle),getResources().getString(R.string.sombraDescription), R.drawable.sombrathumb, R.drawable.sombrafull));
@@ -59,6 +60,10 @@ public class ArtworkActivity extends AppCompatActivity {
                 temp.add(new Artwork(getResources().getString(R.string.darkelfTitle),getResources().getString(R.string.darkelfDescription), R.drawable.darkelfthumb, R.drawable.darkelffull));
         }
         return temp;
+    }
+
+    public void onActivityResult() {
+
     }
 
 }

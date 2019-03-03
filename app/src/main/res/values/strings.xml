@@ -14,6 +14,9 @@
 
     <!--menu_item.xml-->
 
+    <!--ArtworkActivity-->
+    <string name="gallery">Gallery</string>
+
     <!--placeholder strings-->
     <string name="placeholder_short">Placeholder</string>
     <string name="placeholder_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
