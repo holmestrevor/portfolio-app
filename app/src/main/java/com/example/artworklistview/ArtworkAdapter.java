@@ -30,12 +30,14 @@ public class ArtworkAdapter extends ArrayAdapter<Artwork> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.artwork_item, parent, false);
         }
 
+        //Alternates the color of the element background.
         if(position%2==1) {
             convertView.setBackgroundColor(convertView.getResources().getColor(R.color.colorPrimaryMidDark, null));
         } else {
             convertView.setBackgroundColor(convertView.getResources().getColor(R.color.colorPrimaryDark, null));
         }
 
+        //The amount of casting here is dumb. It looks dirty, but it works so ¯\_(ツ)_/¯
         TextView title = (TextView)((LinearLayout)((LinearLayout)convertView).getChildAt(1)).getChildAt(0);
         TextView blurb = (TextView)((LinearLayout)((LinearLayout)convertView).getChildAt(1)).getChildAt(1);
 
@@ -45,6 +47,9 @@ public class ArtworkAdapter extends ArrayAdapter<Artwork> {
         blurb.setText(work.getBlurb());
         artworkImage.setImageResource(work.getImageID());
 
+        /*
+
+         */
         convertView.setOnClickListener((b) -> {
             Intent i = new Intent(getContext(), ViewArtworkActivity.class);
             i.putExtra("imageID", work.getFullImageID());

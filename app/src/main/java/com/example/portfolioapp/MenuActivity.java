@@ -52,6 +52,7 @@ public class MenuActivity extends AppCompatActivity {
         fadeInRight = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in_fromright);
         fadeInLeft = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in_fromleft);
 
+        //Every paragraph with an even index will fade in from the left, and vice versa.
         bioTitle.setAnimation(fadeInRight);
         for(int i=0; i<bioParagraphs.size(); i++) {
             if(i%2==0) {
@@ -61,24 +62,24 @@ public class MenuActivity extends AppCompatActivity {
             }
         }
 
+        //Fetch the categories
         categories = generateCategories();
 
+        //Initialize the adapter
         adt = new CategoryAdapter(this, categories);
+        //Initialize the ListView
         ListView categoryList = (ListView)findViewById(R.id.categories);
+        //Attach the adapter to the ListView
         categoryList.setAdapter(adt);
 
         //TODO add database link to access images on a remote server
 
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-    }
-
     /**
-     *
-     * @return
+     * Generates the Category objects that will be passed into CategoryAdapter. For now, they are
+     * manually added. Someday I hope to fetch them from a database.
+     * @return ArrayList of Category objects to be sent to CategoryAdapter
      */
     private ArrayList<Category> generateCategories() {
         ArrayList<Category> items = new ArrayList<>();
@@ -89,7 +90,8 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     /**
-     *
+     * Launches ArtworkActivity and sends an Intent to it that will define what artworks appear on
+     * the page.
      * @param view
      */
     public void launchArtworkActivity(View view) {

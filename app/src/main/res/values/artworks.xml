@@ -30,6 +30,14 @@
     <string name="pupperTitle">Shiba Inu</string>
     <string name="pupperDescription">Medium: Watercolor pencils\nA cute little Shiba. I don\'t have one, so I draw one.</string>
 
+    <!--Beach-->
+    <string name="beachTitle">Virginia Beach</string>
+    <string name="beachDescription">Based on the view from a hotel in Virginia beach, not too far from the poseidon statue (That I also painted! Wacko!).</string>
+
+    <!--Snowfall-->
+    <string name="snowfallTitle">Winter</string>
+    <string name="snowfallDescription">A recreation of the work \'Winter\', done by Lawren Harris. I found the combination of colours really captivating.</string>
+
 
     <!--DIGITAL-->
 

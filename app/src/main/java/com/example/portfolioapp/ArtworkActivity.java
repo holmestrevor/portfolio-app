@@ -49,6 +49,8 @@ public class ArtworkActivity extends AppCompatActivity {
             case PAINTINGS:
                 temp.add(new Artwork(getResources().getString(R.string.ironmanTitle),getResources().getString(R.string.ironmanDescription), R.drawable.ironmanthumb, R.drawable.ironmanfull));
                 temp.add(new Artwork(getResources().getString(R.string.pupperTitle),getResources().getString(R.string.pupperDescription),R.drawable.pupperthumb, R.drawable.pupperfull));
+                temp.add(new Artwork(getResources().getString(R.string.beachTitle),getResources().getString(R.string.beachDescription),R.drawable.beachthumb,R.drawable.beachfull));
+                temp.add(new Artwork(getResources().getString(R.string.snowfallTitle),getResources().getString(R.string.snowfallDescription),R.drawable.snowfallthumb,R.drawable.snowfallfull));
                 break;
             case SKETCHES:
                 temp.add(new Artwork(getResources().getString(R.string.sombraTitle),getResources().getString(R.string.sombraDescription), R.drawable.sombrathumb, R.drawable.sombrafull));

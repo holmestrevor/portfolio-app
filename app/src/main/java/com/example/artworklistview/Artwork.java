@@ -1,5 +1,9 @@
 package com.example.artworklistview;
 
+/**
+ * @author Trevor Holmes
+ * Object that stores the information of an artwork.
+ */
 public class Artwork {
 
     private String title, blurb;
@@ -16,6 +20,10 @@ public class Artwork {
         setFullImageID(fullImageID);
     }
 
+    /**
+     *
+     * @return - The title of the Artwork.
+     */
     public String getTitle() {
         return title;
     }
@@ -24,6 +32,10 @@ public class Artwork {
         this.title = title;
     }
 
+    /**
+     *
+     * @return - The blurb associated with the artwork.
+     */
     public String getBlurb() {
         return blurb;
     }
@@ -32,6 +44,10 @@ public class Artwork {
         this.blurb = blurb;
     }
 
+    /**
+     *
+     * @return - The image thumbnail resource ID associated with the artwork.
+     */
     public int getImageID() {
         return imageID;
     }
@@ -40,6 +56,10 @@ public class Artwork {
         this.imageID = imageID;
     }
 
+    /**
+     *
+     * @return - The image full-res resource ID associated with the artwork.
+     */
     public int getFullImageID() {
         return fullImageID;
     }
