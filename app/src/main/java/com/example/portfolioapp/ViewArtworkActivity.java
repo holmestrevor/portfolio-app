@@ -32,9 +32,10 @@ public class ViewArtworkActivity extends AppCompatActivity {
         test = (TouchImageView) findViewById(R.id.artFull);
         test.setImageResource(fromPrevious.getIntExtra("imageID", R.drawable.poseidonbg));
 
-        if(test.getDrawable().getIntrinsicWidth()>test.getDrawable().getIntrinsicHeight()) {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        }
+        //Automatically sets the orientation based on the width/height ratio of the image. Cool in theory, annoying in practice.
+//        if(test.getDrawable().getIntrinsicWidth()>test.getDrawable().getIntrinsicHeight()) {
+//            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+//        }
 
     }
 }
