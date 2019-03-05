@@ -6,9 +6,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
+import com.ortiz.touchview.TouchImageView;
+
 public class ViewArtworkActivity extends AppCompatActivity {
 
     private ImageView mImageView;
+    //TouchImageView library provided courtesy of MikeOrtiz (https://github.com/MikeOrtiz/TouchImageView)
+    private TouchImageView test;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -18,12 +22,20 @@ public class ViewArtworkActivity extends AppCompatActivity {
 
         Intent fromPrevious = getIntent();
 
-        mImageView = (ImageView) findViewById(R.id.artFull);
-        mImageView.setImageResource(fromPrevious.getIntExtra("imageID", R.drawable.poseidonbg));
+//        mImageView = (ImageView) findViewById(R.id.artFull);
+//        mImageView.setImageResource(fromPrevious.getIntExtra("imageID", R.drawable.poseidonbg));
+//
+//        if(mImageView.getDrawable().getIntrinsicWidth()>mImageView.getDrawable().getIntrinsicHeight()) {
+//            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+//        }
 
-        if(mImageView.getDrawable().getIntrinsicWidth()>mImageView.getDrawable().getIntrinsicHeight()) {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        }
+        test = (TouchImageView) findViewById(R.id.artFull);
+        test.setImageResource(fromPrevious.getIntExtra("imageID", R.drawable.poseidonbg));
+
+        //Automatically sets the orientation based on the width/height ratio of the image. Cool in theory, annoying in practice.
+//        if(test.getDrawable().getIntrinsicWidth()>test.getDrawable().getIntrinsicHeight()) {
+//            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+//        }
 
     }
 }

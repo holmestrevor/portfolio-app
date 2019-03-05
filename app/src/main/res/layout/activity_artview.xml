@@ -3,10 +3,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
+    <!--<ImageView-->
+        <!--android:id="@+id/artFull"-->
+        <!--android:background="#111111"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
+
+    <!--TouchImageView library provided courtesy of MikeOrtiz (https://github.com/MikeOrtiz/TouchImageView)-->
+    <com.ortiz.touchview.TouchImageView
         android:id="@+id/artFull"
         android:background="#111111"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 </android.support.constraint.ConstraintLayout>

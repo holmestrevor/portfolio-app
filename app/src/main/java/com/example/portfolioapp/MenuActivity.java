@@ -47,7 +47,13 @@ public class MenuActivity extends AppCompatActivity {
         never have to do it manually because I'm lazy.
          */
         String p1 = ((TextView) findViewById(R.id.bioParagraph1)).getText().toString();
-        bioParagraphs.get(0).setText(p1.replaceFirst("@",String.valueOf(Calendar.getInstance().get(Calendar.YEAR)-1998)));
+        int age = 0;
+        if(Calendar.getInstance().get(Calendar.MONTH)>=6 && Calendar.getInstance().get(Calendar.DAY_OF_MONTH)>=6) {
+            age = Calendar.getInstance().get(Calendar.YEAR)-1998;
+        } else {
+            age = Calendar.getInstance().get(Calendar.YEAR)-1999;
+        }
+        bioParagraphs.get(0).setText(p1.replaceFirst("@", String.valueOf(age)));
 
         fadeInRight = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in_fromright);
         fadeInLeft = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in_fromleft);
